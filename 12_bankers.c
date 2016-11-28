@@ -21,6 +21,7 @@ int main(void) {
     int available[10];         // Available vector           (W)
 
     input(allocation, need, maximum, available, &n, &m);
+    res = banker(allocation, need, available, n, m);
 
     return 0;
 }
@@ -64,3 +65,29 @@ void input(int allocation[10][10], int need[10][10], int maximum[10][10], int av
         printf("\n");
     }
 }
+
+
+
+int banker(int allocation[10][10], int need[10][10], int available[10], int n, int m) {
+    int safe;
+    int sequence[10];
+    int i;
+
+    safe = safety(allocation, need, available, n, m, sequence);
+
+    if (safe != 0) {
+        printf("\n");
+        for (i = 0; i < n; i++) {
+            printf("%d ", a[i]);
+        }
+
+        printf("\nA safe sequence exists.");
+        return 1;
+
+    } else {
+
+        printf("\nNo safe sequence exists.");
+        return 0;
+    }
+}
+
