@@ -186,3 +186,37 @@ PROCESS BURST TIME      WAITING TIME    TURN AROUND TIME
 Average waiting time: 5.00
 Average turn around time: 15.00
 ```
+
+### 11
+
+*Using OpenMP, Design, develop and run a multi-threaded program to generate and print Fibonacci Series. One thread has to generate the numbers up to the specified limit and another thread has to print them. Ensure proper synchronization.*
+
+#### Execution
+
+```shell
+$ cc -fopenmp 11_thread_fibonacci.c 
+adithya at thinkpad-t420 in ~/P/G/vtu-os-lab-Programs
+                                       
+$ ./a.out 
+Enter the number of terms: 10
+Thread 0 -- generated term number 3
+Thread 0 -- generated term number 4
+Thread 0 -- generated term number 5
+Thread 0 -- generated term number 6
+Thread 0 -- generated term number 7
+Thread 0 -- generated term number 8
+Thread 0 -- generated term number 9
+Thread 0 -- generated term number 10
+
+The series is:
+Thread 1 -- generated term 0
+Thread 1 -- generated term 1
+Thread 1 -- generated term 1
+Thread 1 -- generated term 2
+Thread 1 -- generated term 3
+Thread 1 -- generated term 5
+Thread 1 -- generated term 8
+Thread 1 -- generated term 13
+Thread 1 -- generated term 21
+Thread 1 -- generated term 34
+```
