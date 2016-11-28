@@ -134,7 +134,7 @@ Child PID: 21126
 
 ### 10
 
-*Design, develop and execute a program in C / C++ to simulate the working of Shortest Remaining Time and Round-Robin Scheduling Algorithms. Experiment with different quantum sizes for the Round- Robin algorithm. In all cases, determine the average turn-around time. The input can be read from key board or from a file.*
+*Design, develop and execute a program in C / C++ to simulate the working of Shortest Remaining Time and Round-Robin Scheduling Algorithms. Experiment with different quantum sizes for the Round- Robin algorithm. In all cases, determine the average turn-around time. The input can be read from keyboard or from a file.*
 
 #### Execution
 
