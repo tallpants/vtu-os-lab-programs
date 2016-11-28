@@ -12,10 +12,6 @@ Hopefully it'll help some someone who needs it the way I did.
 
 #### Execution:
 
-Do `sh 7a_reverse_arguments.sh` followed by some arguments.
-
-For example:
-
 ```shell
 $ sh 7a_reverse_arguments.sh Hello World
 
@@ -98,4 +94,21 @@ Enter the command: date
 Mon Nov 28 13:02:49 IST 2016
 
 Enter 0 to exit or 1 to continue: 0
+```
+
+### 8B
+
+*C program to create a file with 16 bytes of arbitrary data from the beginning and another 16 bytes of arbitrary data from an offset of 48. Display the file contents to demonstrate how the hole in file is handled.*
+
+#### Execution
+
+```shell
+$ cc 8b_file_writing.c
+
+$ ./a.out
+0000000   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f   g
+0000020  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0  \0
+*
+0000060   h   i   j   k   l   m   n   o   p   q   r   s   t   u   v   w
+0000100
 ```
