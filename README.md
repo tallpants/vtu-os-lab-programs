@@ -2,7 +2,7 @@
 
 All of the VTU OS lab problems with solutions and instructions and how to run it.
 
-Hopefully it'll help some poor soul who needs it the way I did.
+Hopefully it'll help some someone who needs it the way I did.
 
 ## Shell Programs
 
