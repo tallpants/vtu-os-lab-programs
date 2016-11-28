@@ -23,3 +23,24 @@ Number of arguments is 2
 The arguments are Hello World
 The reverse is World Hello 
 ```
+
+### 8A
+
+*Shell script that accepts two file names as arguments, checks if the permissions for these files are identical and if the permissions are identical, outputs the common permissions, otherwise outputs each file name followed by its permissions.*
+
+### Execution
+
+```shell
+$ touch f1
+$ touch f2
+$ sh 8a_permissions.sh f1 f2
+
+Identical permissions: rw-rw-r--
+
+$ chmod u+x f1
+$ sh 8a_permissions.sh f1 f2
+
+Permissions are not identical
+f1 permissions: rwxrw-r--
+f2 permissions: rw-rw-r--
+```
