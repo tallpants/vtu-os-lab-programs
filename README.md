@@ -112,3 +112,22 @@ $ ./a.out
 0000060   h   i   j   k   l   m   n   o   p   q   r   s   t   u   v   w
 0000100
 ```
+
+### 9B
+
+*C program to do the following: Using fork( ) create a child process. The child process prints its own process-id and id of its parent and then exits. The parent process waits for its child to finish (by executing the wait( )) and prints its own process-id and the id of its child process and then exits.*
+
+### Execution
+
+```shell
+$ cc 9b_parent_child_pid.c
+
+$ ./a.out
+Child Process:
+Parent PID: 21125
+Child PID: 21126
+
+Parrent Process:
+Parent PID: 21125
+Child PID: 21126
+```
