@@ -196,7 +196,7 @@ Average turn around time: 15.00
 ```shell
 $ cc -fopenmp 11_thread_fibonacci.c 
 adithya at thinkpad-t420 in ~/P/G/vtu-os-lab-Programs
-                                       
+
 $ ./a.out 
 Enter the number of terms: 10
 Thread 0 -- generated term number 3
@@ -220,3 +220,10 @@ Thread 1 -- generated term 13
 Thread 1 -- generated term 21
 Thread 1 -- generated term 34
 ```
+
+### 12
+
+*Design, develop and run a program to implement the Banker’s Algorithm. Demonstrate its working with different data values.*
+
+#### Execution
+
