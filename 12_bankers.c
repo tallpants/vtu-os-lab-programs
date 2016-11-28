@@ -3,7 +3,8 @@
  * Demonstrate its working with different data values.
  */
 
- #include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 void res_request();
@@ -22,6 +23,21 @@ int main(void) {
 
     input(allocation, need, maximum, available, &n, &m);
     int res = banker(allocation, need, available, n, m);
+
+    if (res != 0) {
+        int choice;
+        printf("\nMake an additional request? (1/0): ");
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int pid;
+            printf("\nWhich process: ");
+            scanf("%d", &pid);
+
+            res_request(allocation, need, available, pid - 1, m);
+            res = banker(allocation, need, available, n, m);
+        }
+    }
 
     return 0;
 }
@@ -113,6 +129,7 @@ int safety(int allocation[10][10], int need[10][10], int available[10], int n, i
 	return 0;
 }
 
+
 int banker(int allocation[10][10], int need[10][10], int available[10], int n, int m) {
     int safe;
     int sequence[10];
@@ -136,3 +153,33 @@ int banker(int allocation[10][10], int need[10][10], int available[10], int n, i
     }
 }
 
+
+void res_request(int allocation[10][10], int need[10][10], int available[10], int pid, int m) {
+    int request[10];
+    int i;
+
+    printf("Request vector: ");
+    for (i = 0; i < m; i++) {
+        scanf("%d", &request[i]);
+    }
+
+    for (i = 0; i < m; i++) {
+        if (request[i] > need[pid][i]) {
+            printf("\nError");
+            printf("\nThe request exceeds the maximum declared by the process.");
+            exit(0);
+        }
+
+        if (request[i] > available[i]) {
+            printf("\nError");
+            printf("\nThere are not enough resources available.");
+            exit(0);
+        }
+    }
+
+    for (i = 0; i < m; i++) {
+        available[i] -= request[i];
+        allocation[pid][i] += request[i];
+        need[pid][i] -= request[i];
+    }
+}

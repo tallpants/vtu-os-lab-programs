@@ -227,3 +227,43 @@ Thread 1 -- generated term 34
 
 #### Execution
 
+```shell
+$ cc 12_bankers.c
+
+$ ./a.out
+How many processes: 5
+How many resources types: 3
+Allocation matrix:
+0 1 0
+2 0 0
+3 0 2
+2 1 1
+0 0 2
+
+Maximum matrix:
+7 5 3
+3 2 2
+9 0 2
+2 2 2
+4 3 3
+
+Available resource vector:
+3 3 2
+
+The need matrix is:
+7 4 3
+1 2 2
+6 0 0
+0 1 1
+4 3 1
+
+1 3 4 0 2
+A safe sequence exists.
+Make an additional request? (1/0): 1
+
+Which process: 2
+Request vector: 1 0 2
+
+1 3 4 0 2
+A safe sequence exists.
+```
