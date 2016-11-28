@@ -51,7 +51,28 @@ f2 permissions: rw-rw-r--
 
 #### Execution
 
-<!--TODO: Execute and output for 9A bundle script-->
+```shell
+$ cat >f1
+This is file f1
+[Ctrl + D]
+
+$ cat >f2
+This is file f2
+[Ctrl + D]
+
+$ sh 9a_bundle.sh f1 f2
+                                       
+$ rm f1 f2
+                                       
+$ sh cr.sh
+                                       
+$ cat f1
+This is file f1
+                                 
+$ cat f2
+This is file f2
+
+```
 
 ## C Programs
 
