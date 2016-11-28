@@ -117,7 +117,7 @@ $ ./a.out
 
 *C program to do the following: Using fork( ) create a child process. The child process prints its own process-id and id of its parent and then exits. The parent process waits for its child to finish (by executing the wait( )) and prints its own process-id and the id of its child process and then exits.*
 
-### Execution
+#### Execution
 
 ```shell
 $ cc 9b_parent_child_pid.c
@@ -130,4 +130,59 @@ Child PID: 21126
 Parrent Process:
 Parent PID: 21125
 Child PID: 21126
+```
+
+### 10
+
+*Design, develop and execute a program in C / C++ to simulate the working of Shortest Remaining Time and Round-Robin Scheduling Algorithms. Experiment with different quantum sizes for the Round- Robin algorithm. In all cases, determine the average turn-around time. The input can be read from key board or from a file.*
+
+#### Execution
+
+```shell
+$ cc 10_schedulers.c
+
+$ ./a.out
+1. Shortest job first
+2. Round robin
+> 1
+How many processes: 4
+Arrival times of processes: 0 1 2 3
+Burst times of processes:   8 4 9 5
+
+Average waiting time: 6.50
+Average turn around time: 13.00
+
+$ ./a.out
+1. Shortest job first
+2. Round robin
+> 2
+Number of processes: 3
+Burst time of processes: 24 3 3
+Time quantum: 4
+
+PROCESS BURST TIME      WAITING TIME    TURN AROUND TIME
+======= ==========      ============    =================
+1               24              6               30
+2               3               4               7
+3               3               7               10
+
+Average waiting time: 5.67
+Average turn around time: 15.67
+
+$ ./a.out
+1. Shortest job first
+2. Round robin
+> 2
+Number of processes: 3
+Burst time of processes: 24 3 3
+Time quantum: 3
+
+PROCESS BURST TIME      WAITING TIME    TURN AROUND TIME
+======= ==========      ============    =================
+1               24              6               30
+2               3               3               6
+3               3               6               9
+
+Average waiting time: 5.00
+Average turn around time: 15.00
 ```
