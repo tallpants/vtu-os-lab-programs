@@ -15,10 +15,10 @@ int banker();
 int main(void) {
     int n;                     // Number of processes
     int m;                     // Number of resources types
-    int allocation[10][10];    // Allocation matrix          (A)
-    int maximum[10][10];       // Maximum matrix             (M)
-    int need[10][10];          // Need matrix                (N)
-    int available[10];         // Available vector           (W)
+    int allocation[10][10];    // (A)
+    int maximum[10][10];       // (M)
+    int need[10][10];          // (N)
+    int available[10];         // (W)
 
     input(allocation, need, maximum, available, &n, &m);
     int res = banker(allocation, need, available, n, m);
@@ -107,7 +107,7 @@ int safety(int allocation[10][10], int need[10][10], int available[10], int n, i
 
 		if (pflag == n)
 			return 1;
-            
+
 	}
 
 	return 0;
