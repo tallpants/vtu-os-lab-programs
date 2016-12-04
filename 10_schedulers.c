@@ -95,9 +95,9 @@ void round_robin(void) {
     scanf("%d", &time_quantum);
 
     while (1) {
-        
+
         finished_count = 0;
-        
+
         for (i = 0; i < number_of_processes; i++) {
             temp = time_quantum;
             if (burst_time_copy[i] == 0) {
